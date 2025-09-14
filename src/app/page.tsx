@@ -14,11 +14,15 @@ export default function HomePage() {
   return (
     <>
       <ThreeBg />
-      <Navbar onLoginClick={() => setModalOpen(true)} />
-      <LoginModal open={modalOpen} onClose={() => setModalOpen(false)} />
-      <HeroSection />
-      <FeaturesSection />
-      <Footer />
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Navbar onLoginClick={() => setModalOpen(true)} />
+        <LoginModal open={modalOpen} onClose={() => setModalOpen(false)} />
+        <main className="flex-1 flex flex-col">
+          <HeroSection />
+          <FeaturesSection />
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }

@@ -1,21 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+'use client'
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #0f172a;
-  color: #fff;
-  font-family: sans-serif;
-  overflow-x: hidden;
-}
-canvas#bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  display: block;
+import { useState } from 'react'
+import Navbar from '../components/Navbar'
+import LoginModal from '../components/LoginModal'
+import HeroSection from '../components/HeroSection'
+import FeaturesSection from '../components/FeaturesSection'
+import Footer from '../components/Footer'
+import ThreeBg from '../components/ThreeBg'
+
+export default function HomePage() {
+  const [modalOpen, setModalOpen] = useState(false)
+
+  return (
+    <>
+      <ThreeBg />
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Navbar onLoginClick={() => setModalOpen(true)} />
+        <LoginModal open={modalOpen} onClose={() => setModalOpen(false)} />
+        <main className="flex-1 flex flex-col">
+          <HeroSection />
+          <FeaturesSection />
+        </main>
+        <Footer />
+      </div>
+    </>
+  )
 }

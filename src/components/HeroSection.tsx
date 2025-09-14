@@ -1,9 +1,9 @@
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 py-20">
+    <section className="flex flex-col items-center justify-center text-center px-6 py-20 min-h-[70vh]">
       <h1 className="text-5xl md:text-7xl font-bold mb-6">DSRT</h1>
       <p className="text-xl md:text-2xl mb-8">Digital Smart Revise Technology</p>
-      <p className="text-gray-300 max-w-3xl text-center text-lg md:text-xl leading-relaxed mb-8">
+      <p className="text-gray-300 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed mb-8">
         DSRT is a cutting-edge digital platform designed to revolutionize the way individuals and businesses 
         approach learning, revision, and workflow optimization. By integrating advanced AI-driven tools 
         with a user-friendly interface, DSRT ensures that your tasks are performed efficiently, 
